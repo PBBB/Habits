@@ -13,6 +13,9 @@
 		2BCBB51823791C2500EE3F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BCBB51723791C2500EE3F74 /* Assets.xcassets */; };
 		2BCBB51B23791C2500EE3F74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BCBB51A23791C2500EE3F74 /* Preview Assets.xcassets */; };
 		2BCBB51E23791C2500EE3F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCBB51C23791C2500EE3F74 /* LaunchScreen.storyboard */; };
+		2BCBB52623791C6800EE3F74 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBB52523791C6800EE3F74 /* Activity.swift */; };
+		2BCBB528237920F400EE3F74 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBB527237920F400EE3F74 /* ActivityDetailView.swift */; };
+		2BCBB52A2379210B00EE3F74 /* AddActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBB5292379210B00EE3F74 /* AddActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2BCBB51A23791C2500EE3F74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BCBB51D23791C2500EE3F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BCBB51F23791C2500EE3F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BCBB52523791C6800EE3F74 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		2BCBB527237920F400EE3F74 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		2BCBB5292379210B00EE3F74 /* AddActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				2BCBB51123791C2400EE3F74 /* AppDelegate.swift */,
 				2BCBB51323791C2400EE3F74 /* SceneDelegate.swift */,
 				2BCBB51523791C2400EE3F74 /* ContentView.swift */,
+				2BCBB527237920F400EE3F74 /* ActivityDetailView.swift */,
+				2BCBB5292379210B00EE3F74 /* AddActivityView.swift */,
+				2BCBB52523791C6800EE3F74 /* Activity.swift */,
 				2BCBB51723791C2500EE3F74 /* Assets.xcassets */,
 				2BCBB51C23791C2500EE3F74 /* LaunchScreen.storyboard */,
 				2BCBB51F23791C2500EE3F74 /* Info.plist */,
@@ -148,6 +157,9 @@
 			files = (
 				2BCBB51223791C2400EE3F74 /* AppDelegate.swift in Sources */,
 				2BCBB51423791C2400EE3F74 /* SceneDelegate.swift in Sources */,
+				2BCBB52623791C6800EE3F74 /* Activity.swift in Sources */,
+				2BCBB52A2379210B00EE3F74 /* AddActivityView.swift in Sources */,
+				2BCBB528237920F400EE3F74 /* ActivityDetailView.swift in Sources */,
 				2BCBB51623791C2400EE3F74 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
