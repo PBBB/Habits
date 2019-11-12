@@ -14,11 +14,11 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(activities.activityTypes, id: \.name) { activityType in
-                NavigationLink(destination: ActivityDetailView(activities: self.activities, activityType: activityType)) {
+            List(activities.activities, id: \.name) { activity in
+                NavigationLink(destination: ActivityDetailView(activity: activity)) {
                     VStack(alignment: .leading) {
-                        Text(activityType.name)
-                        Text("Done \(self.activities.doneTimesOfActivityType(type: activityType)) times")
+                        Text(activity.name)
+                        Text("Done \(activity.doneTimes) times")
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
@@ -41,10 +41,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let activities = Activities()
-        activities.activities.append(Activity(type: .language, doneTime: Date()))
-        activities.activities.append(Activity(type: .exercising, doneTime: Date()))
-        activities.activities.append(Activity(type: .exercising, doneTime: Date()))
-        activities.activities.append(Activity(type: .other(name: "Other 1", description: "Desciption 1"), doneTime: Date()))
+        activities.activities.append(Activity(name: "name1", description: "description1", doneTimes: 1))
         return ContentView(activities: activities)
     }
 }

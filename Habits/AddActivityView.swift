@@ -18,7 +18,7 @@ struct AddActivityView: View {
 struct AddActivityView_Previews: PreviewProvider {
     static var previews: some View {
         let activities = Activities()
-        activities.activities.append(Activity(type: .language, doneTime: Date()))
+
         return AddActivityView(activities: activities)
     }
 }

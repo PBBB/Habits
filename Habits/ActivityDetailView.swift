@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct ActivityDetailView: View {
-    var activities: Activities
-    var activityType: ActivityType
+    var activity: Activity
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -19,8 +18,6 @@ struct ActivityDetailView: View {
 
 struct ActivityDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let activities = Activities()
-        activities.activities.append(Activity(type: .language, doneTime: Date()))
-        return ActivityDetailView(activities: activities, activityType: .language)
+        ActivityDetailView(activity: Activity(name: "name", description: "description", doneTimes: 1))
     }
 }
