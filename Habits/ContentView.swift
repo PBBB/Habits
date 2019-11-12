@@ -16,12 +16,19 @@ struct ContentView: View {
         NavigationView {
             List(activities.activities, id: \.name) { activity in
                 NavigationLink(destination: ActivityDetailView(activity: activity)) {
-                    VStack(alignment: .leading) {
-                        Text(activity.name)
-                        Text("Done \(activity.doneTimes) times")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+                    HStack {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(activity.name)
+                            Text(activity.description)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        Spacer()
+                        Text("\(activity.doneTimes) times")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                     }
+                    .padding(.vertical, 4)
                 }
             }
             .navigationBarTitle("Habits")

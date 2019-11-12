@@ -10,7 +10,7 @@ import Foundation
 struct Activity {
     var name: String
     var description: String
-    var doneTimes = 1
+    var doneTimes = 0
 }
 
 
@@ -19,7 +19,11 @@ enum ActivityError: Error {
 }
 
 class Activities: ObservableObject {
-    @Published var activities: [Activity] = []
+    @Published var activities: [Activity] = [
+        Activity(name: "Language", description: "Learning English", doneTimes: 0),
+        Activity(name: "Instrument", description: "Learning to play piano", doneTimes: 0),
+        Activity(name: "Exercising", description: "Slow run", doneTimes: 0)
+    ]
     
     func addActivity(activity: Activity) throws {
         let activityNames: [String] = activities.map({ $0.name })
