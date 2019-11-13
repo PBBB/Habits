@@ -33,4 +33,12 @@ class Activities: ObservableObject {
             activities.append(activity)
         }
     }
+    
+    func doItOneMoreTime(activity activityToAddTime: Activity) {
+        for activity in activities {
+            if activity.name == activityToAddTime.name {
+                activity.doneTimes += 1
+            }
+        }
+    }
 }
