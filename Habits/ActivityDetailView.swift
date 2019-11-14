@@ -9,33 +9,34 @@
 import SwiftUI
 
 struct ActivityDetailView: View {
+    var activities: Activities
     var activity: Activity
+//    var index: Int
     
     var body: some View {
-        NavigationView {
-            Form {
-                
-                Section {
-                    Text(activity.description)
-                    Text("Done \(activity.doneTimes) times")
-                }
-                
-                Section {
-                    Button("Do it") {
-//                        self.activity.doneTimes += 1
-                    }
-                }
-                
-                
-                
+        Form {
+            
+            Section {
+                Text(activity.description)
+                Text("Done \(activity.doneTimes) times")
             }
-            .navigationBarTitle(activity.name)
+            
+            
+            Section {
+                Button("Do it") {
+                    self.activities.doOneMoreTime(activity: self.activity)
+                }
+            }
+            
+            
+            
         }
+        .navigationBarTitle(Text(activity.name), displayMode: .inline)
     }
 }
 
 struct ActivityDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityDetailView(activity: Activity(name: "name", description: "description", doneTimes: 1))
+        ActivityDetailView(activities: Activities(), activity: Activity(name: "name", description: "description", doneTimes: 1))
     }
 }

@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    var activities = Activities()
+    @ObservedObject var activities = Activities()
     @State private var showAddActivityView = false
     
     var body: some View {
         NavigationView {
             List(activities.activities, id: \.name) { activity in
-                NavigationLink(destination: ActivityDetailView(activity: activity)) {
+                NavigationLink(destination: ActivityDetailView(activities: self.activities, activity: activity)) {
                     HStack {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(activity.name)
